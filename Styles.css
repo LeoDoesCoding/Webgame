@@ -1,0 +1,132 @@
+p, h1 {
+	font-family: "Lucida Console";
+}
+
+#bg {
+	position: absolute;
+	width: 100%;
+	z-index:-60;
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+	background-image: url(Images/Depths.png);
+}
+
+/*Clickable rock container*/
+#clickContainer {
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  z-index: 0;
+}
+
+#displayTbl{
+	position: relative;
+	width:100%;
+	height:100%;
+	z-index:-50;
+}
+
+/*Animation for when rock is hit*/
+@keyframes shake {
+  0% { transform: translate(10px, 5px); }
+  25% { transform: translate(-10px, px); }
+  50% { transform: translate(10px, -5px); }
+  75% { transform: translate(-10px, 5px); }
+  100% { transform: translate(-10px, -5px); }
+}
+
+.apply-shake {
+    animation: shake 0.1s;
+}
+
+/*Shared container attributes*/
+#pointBox, #upgradeBox{
+	display: inline-box;
+	position: absolute;
+	width: 22%;
+	padding: 10px;
+	margin: 20px 20px;
+	z-index: 1;
+}
+
+
+#boxbox{
+	display: grid;
+	position: absolute;
+	margin: 2.5%;
+	bottom:0;
+	font-size: 3vh;
+	grid-template-columns: 280px;
+	grid-template-rows: 30px 280px;
+	text-align: center;
+}
+
+
+/*Collection display box*/
+#collectBox{
+	padding: 20px;
+	width: 240px;
+	border-image: url(Images/menuBorder.png) 30 round;
+	border-width: 2vh;
+	border-style: ridge;
+	background-image: url(Images/menuInner.png);
+	background-repeat: repeat;
+}
+
+/*Points display box*/
+#pointBox{
+	height: 20vh;
+	line-height: 0.5rem;
+}
+
+
+/*Upgrades menu container*/
+#upgradeBox{
+	right:0;
+	height: 80vh;
+	border-image: url(Images/menuBorder.png) 30 round;
+	border-width: 2vh;
+	border-style: ridge;
+	background-image: url(Images/menuInner.png);
+	background-repeat: repeat;
+}
+
+
+/*Purchase upgrade buttons*/
+.upButtons, .depthButtons{
+	width: 100%;
+	background-color: darkSeaGreen;
+}
+
+.upButtons{
+	margin-top: 2vh;
+	height: 15%;
+	border: 2vh outset darkSeaGreen;
+	text-align: left;
+}
+
+.depthButtons{
+	height: 18%;
+	border-style: 1vh solid black;
+}
+
+
+.upButtons:hover, .depthButtons:hover{
+	background-color: LightGreen;
+	border-color: LightGreen;
+}
+
+.upButtons.active, .depthButtons.active{
+	border-style: inset;
+	background-color: seaGreen;
+	border-color: seaGreen;
+}
+
+.upButtons:disabled, .depthButtons:disabled{
+	background-color: grey;
+	border-color: grey;
+	color: black;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Clicker</title>
+    <link rel="stylesheet" href="Styles.css">
+    <script src="ClickerCode.js" charset="utf-8" defer></script>
+  </head>
+  
+  <!--Removes page scroll-->
+  <body style="overflow: hidden">
+  
+  <!--Clickable rock-->
+  <div id="clickContainer" style="position:absolute;">
+  </div>
+  
+  <!--Upgrade menu-->
+  <div id="pointBox">
+	<h1 id="money">£0</h1>
+	<p id="clicks">Clicks: 0</p>
+	<p id="total">Gross total: 0</p>
+  </div>
+  
+  <!--Upgrades & depths menu-->
+  <div id="upgradeBox">
+	  <button class="upButtons" id="up:click">Pickaxe damage: 1<br>£5</button>
+	  <button class="upButtons" id="up:auto">Auto damage: 0<br>£5</button><br><br><br>
+	  <button class="depthButtons" id="depth:1">Depth 1<br>(unlocked)</button>
+	  <button class="depthButtons" id="depth:2">Depth 2<br>£50</button>
+	  <button class="depthButtons" id="depth:3">Depth 3<br>£400</button>
+  </div>
+  
+   <!--Collection display box-->
+   <div id="boxbox">
+	<div id="collected"></div>
+		<div id="collectBox">
+			<img id="Rose quartz" src="Images/Gems/roseNot.png"></img>
+			<img id="Amethyst" src="Images/Gems/ameNot.png"></img>
+			<img id="Opal" src="Images/Gems/opalNot.png"></img><br>
+			<img id="Malachite" src="Images/Gems/malNot.png"></img>
+			<img id="Agate" src="Images/Gems/agateNot.png"></img>
+			<img id="Ruby" src="Images/Gems/rubyNot.png"></img><br>
+			<img id="Peridot" src="Images/Gems/periNot.png"></img>
+			<img id="Diamond" src="Images/Gems/diaNot.png"></img>
+			<img id="Prismite" src="Images/Gems/finalNot.png"></img>
+		</div>
+	</div>
+	
+	<img src="Images/Depths.png" id="bg"></img>
+    <div><img src="Images/table.png" id="displayTbl"></img></div>
+
+	
+  </body>
+ </html>
